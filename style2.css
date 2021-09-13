@@ -10,15 +10,19 @@
   --textColor: #fff;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   background-size: cover;
   font-family: monospace;
   margin: 0;
-  padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   min-height: 100vh;
+  position: relative;
 }
 
 .rave {
@@ -39,19 +43,31 @@ body {
   color: #000;
 }
 
-img {
-  max-width: 100%;
+.toolbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#theme {
+  color: #fff;
+  background-color: #111;
+  font-family: monospace;
 }
 
 .header {
-  padding: 30px;
   text-align: center;
   font-size: 1.5em;
+  margin: 0 2em;
 }
 
 .navbar {
   border-style: solid;
   border-radius: 6px;
+  margin: 0 2em;
   display: flex;
   justify-content: space-around;
 }
@@ -79,6 +95,7 @@ img {
   flex-direction: row;
   justify-content: center;
   text-align: center;
+  margin: 0 2em;
 }
 
 .left-flex-bar {
@@ -98,12 +115,6 @@ img {
   margin: auto;
 }
 
-#theme {
-  color: #fff;
-  background-color: #111;
-  font-family: monospace;
-}
-
 .center img {
   border-radius: 4px;
   border-style: solid;
@@ -120,7 +131,6 @@ img {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
   color: white;
   text-align: center;
 }
