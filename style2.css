@@ -1,0 +1,130 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --backgroundColor: #000;
+  --textColor: #fff;
+}
+
+body {
+  background-size: cover;
+  font-family: monospace;
+  margin: 0;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+.rave {
+  background-image: url("img/sparks.gif");
+  background-color: #000;
+  color: #fff;
+}
+
+.dark {
+  background-image: none;
+  background-color: #000;
+  color: #fff;
+}
+
+.light {
+  background-image: none;
+  background-color: #fff;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.navbar {
+  border-style: solid;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+}
+
+.light .navbar a:hover {
+  background-color: #555;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.left-flex-bar {
+  flex: 20%;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.center {
+  display: flex;
+  flex: 60%;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+#theme {
+  color: #fff;
+  background-color: #111;
+  font-family: monospace;
+}
+
+.center img {
+  border-radius: 4px;
+  border-style: solid;
+  border-color: black;
+}
+
+.right-flex-bar {
+  flex: 20%;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.footer {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 8px;
+}
