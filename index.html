@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <!--TODO: Why to left and right flex bars not display on mobile?-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nadia's Web Page: Index</title>
-    <link href="style2.css" rel="stylesheet" type="text/css" media="all" />
+    <title>kapustadoll: index</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
   </head>
 
-  <body id="body" class="theme-rave">
+  <body id="body" class="theme-dark">
     <!-- Toolbar -->
     <div class="toolbar">
-      <span></span>
       <select id="theme">
-        <option value="theme-rave">Rave</option>
-        <option value="theme-dark">Dark</option>
-        <option value="theme-light">Light</option>
+        <!-- fix this -->
+        <option value="theme-select">theme</option>
+        <option value="theme-dark">dark</option>
+        <option value="theme-light">light</option>
+        <option value="theme-rave">rave</option>
       </select>
+      <span><a href="mailto:nadiakrakowski@gmail.com">by nadia</a></span>
     </div>
 
     <!-- Header -->
     <div class="header">
-      <h1>Nadia Kapusta's Web Page</h1>
+      <h1>
+        <img src="img/update.gif" alt="">kapustadoll online</h1>
     </div>
 
     <!-- Nav -->
     <div class="navbar">
-      <a href="about.html"><b>About</b></a>
-      <a href="gallery.html"><b>Gallery</b></a>
-      <a href="links.html"><b>Links</b></a>
+      <a href="gallery.html">
+        <p><b>Gallery</b></p>
+      </a>
+
+      <a href="links.html"><p><b>Links</b></p></a>
     </div>
 
     <!-- Flex content -->
     <div class="main-flex">
-      <div class="left-flex-bar">
-        <img src="img/ddr.gif" /><img src="img/SDshuni84.gif" /><img
-          src="img/SDshuni90.gif"
-        /><img src="img/J.gif" /><img src="img/gothicpinkwings.png" /><img
-          src="img/SD_Shuni68.gif"
+      <div class="left-bar">
+        <img src="img/SDshuni84.gif" /><img src="img/SDshuni90.gif" /><img
+          src="img/J.gif"
         />
       </div>
 
-      <div class="center">
-        <img src="img/garden-slowed.gif" />
+      <div class="center-bar">
+        <img src="img/ddr.gif" />
       </div>
 
-      <div class="right-flex-bar">
+      <div class="right-bar">
         <img src="img/SD_Shuni18.gif" /><img src="img/SD_Shuni29.gif" /><img
-          src="img/cija.gif"
-        /><img src="img/SD_Anime16.gif" /><img src="img/SD_Anime09.gif" /><img
-          src="img/SD_Anime19.gif"
-        /><img src="img/SD_Anime14.gif" />
+          src="img/gothicpinkwings.png"
+        />
       </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-      <img src="img/scenedoll.gif" /><img src="img/scenedoll2.gif" /><img
+      <div><img src="img/scenedoll.gif" /><img src="img/scenedoll2.gif" /><img
         src="img/scenedoll3.gif"
-      /><img src="img/scenedoll4.gif" />
+      /><img src="img/scenedoll4.gif" /></div> <a href=http://www.glitter-graphics.com title='Myspace Graphics'><img
+        src=http://dl2.glitter-graphics.net/pub/170/170412vrl6tuq51f.gif width=234
+        height=17 alt='myspace layouts, myspace codes, glitter graphics' border=0></a>
       <br />
+      <span
+        ><a href="https://graphic.neocities.org/" title="Bonnibel's Graphic Collection"
+          ><img
+            src="img/BonGraphics.png"
+            alt="Bonnibel's Graphic Collection" /></a
+      ></span>
+      <span
+        ><a
+          href="http://sd.silentears.net/"
+          title="Silent Devotion ♥"
+          ><img src="img/sd.gif" /></a
+      ></span>
       <br />
       <small
-        >see <a href="links.html"><b>Links</b></a> for sources of pixel art and
-        backgrounds</small
+        ><a href="links.html"><b>Sources for graphics</b></a></small
       >
+      <div class="bottom-right">
+        <img src="img/SD_Anime16.gif" /><img src="img/SD_Anime09.gif" /><img
+          src="img/SD_Anime19.gif"
+        /><img src="img/SD_Anime14.gif" />
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <script src="zoomhorizontal.js"></script>
+    <script src="radial.js"></script>
+    <script src="orbs.js"></script>
   </body>
 </html>

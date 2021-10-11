@@ -1,16 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
+:root {
+  --bg-color: #ddddff;
+  --bg-color-2: #eeeeff;
+  --text-color: #4444aa;
+}
+
 body {
-  background-color: #e6bbe0;
-  background-image: url("img/pinkypink.gif");
+  background-color: var(--bg-color-2);
   background-size: cover;
-  font-family: monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  color: #69445a;
+  color: var(--text-color);
 }
 
 img {
@@ -19,8 +24,8 @@ img {
 
 .main {
   padding: 2em 6em;
-  border: 3px solid #a8698f;
-  background-color: #e6bbe0;
+  border: 3px solid var(--text-color);
+  background-color: var(--bg-color);
   border-radius: 10px;
   max-width: 40%;
   font-size: 14px;
@@ -31,12 +36,12 @@ img {
 }
 
 h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: monospace;
   font-size: 20px;
 }
 
 h2 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: monospace;
   font-size: 14px;
   font-weight: 700;
   margin: 1em 0;

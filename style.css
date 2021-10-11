@@ -1,20 +1,229 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-dark: #000;
+  --font-color-dark: #fff;
+  --background-light: #eee;
+  --font-color-light: #000;
+  --nav-hover-background-light: #555;
+
+  --rave-bg-img: url("img/sparks.gif");
+}
+
+.theme-rave {
+  --page-background-color: var(--background-dark);
+  --page-font-color: var(--font-color-dark);
+  --page-background-image: var(--rave-bg-img);
+  --nav-hover-background-color: var(--background-light);
+  --nav-hover-font-color: var(--font-color-light);
+}
+
+.theme-light {
+  --page-background-color: var(--background-light);
+  --page-font-color: var(--font-color-light);
+  --page-background-image: none;
+  --nav-hover-background-color: var(--nav-hover-background-light);
+  --nav-hover-font-color: var(--font-color-dark);
+}
+
+.theme-dark {
+  --page-background-color: var(--background-dark);
+  --page-font-color: var(--font-color-dark);
+  --page-background-image: none;
+  --nav-hover-background-color: var(--background-light);
+  --nav-hover-font-color: var(--font-color-light);
+}
+
+img {
+  max-width: 100%;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+table {
+  font-family: monospace;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 2em;
+}
+
+a:visited {
+  color: var(--page-font-color);
+}
+
+a {
+  color: var(--page-font-color);
+}
 
 body {
-  background-color: white;
-  color: black;
+  z-index: 0;
+  background-image: var(--page-background-image);
+  background-color: var(--page-background-color);
+  color: var(--page-font-color);
+  background-size: cover;
   font-family: monospace;
-  padding: 2em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+  position: relative;
 }
- img {
-  max-width:100%;
- }
- .link-back {
-   font-size: 1.25em
- }
- .about{
-   padding: 2em;
-   font-size: 1.33em;
- }
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbar span {
+  padding: 2px 4px;
+  background-color: var(--page-background-color);
+  border: solid 1px var(--page-font-color);
+  border-radius: 2px;
+  font-size: 1.2em;
+}
+
+#theme {
+  padding: 2px 4px;
+  color: var(--page-font-color);
+  background-color: var(--page-background-color);
+  border: solid 1px var(--page-font-color);
+  border-radius: 2px;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
+.header {
+  background-color: var(--page-background-color);
+  color: var(--page-font-color);
+  border: solid 2px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5em 3em;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.header h1 {
+  position: relative;
+}
+
+.header img {
+  transform: scale(1.5) rotate(15deg);
+  -moz-transform: scale(1.5) rotate(15deg);
+  -webkit-transform: scale(1.5) rotate(15deg);
+  position: absolute;
+  top: -5px;
+  right: -20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar img {
+  padding-top: 0.5em;
+}
+
+.navbar a {
+  background-color: var(--page-background-color);
+  color: var(--page-font-color);
+  border: solid 2px;
+  border-radius: 10px;
+  padding: 1em 1.5em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.navbar p {
+  margin: 0;
+}
+
+.navbar a:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-font-color);
+  border-radius: 8px;
+}
+
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.center img {
+  border-radius: 4px;
+  border: solid 3px #000;
+}
+
+.right-bar img {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+}
+
+.footer {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--page-font-color);
+  text-align: center;
+  border: solid var(--page-font-color) 2px;
+  border-radius: 10px;
+  background-color: var(--page-background-color);
+  padding: 1em 2em;
+}
+
+.footer a {
+  color: var(--page-font-color);
+}
+
+.bottom-right {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  right: 2em;
+  max-width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar img {
+    display: none;
+    margin-bottom: 0;
+  }
+
+  .navbar a {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+
+  .bottom-right {
+    display: none;
+  }
+}
