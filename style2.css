@@ -1,0 +1,161 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-dark: #000;
+  --font-color-dark: #fff;
+  --background-light: #eee;
+  --font-color-light: #000;
+  --nav-hover-background-light: #555;
+
+  --rave-bg-img: url("img/sparks.gif");
+}
+
+.theme-rave {
+  --page-background-color: var(--background-dark);
+  --page-font-color: var(--font-color-dark);
+  --page-background-image: var(--rave-bg-img);
+  --nav-hover-background-color: var(--background-light);
+  --nav-hover-font-color: var(--font-color-light);
+}
+
+.theme-light {
+  --page-background-color: var(--background-light);
+  --page-font-color: var(--font-color-light);
+  --page-background-image: none;
+  --nav-hover-background-color: var(--nav-hover-background-light);
+  --nav-hover-font-color: var(--font-color-dark);
+}
+
+.theme-dark {
+  --page-background-color: var(--background-dark);
+  --page-font-color: var(--font-color-dark);
+  --page-background-image: none;
+  --nav-hover-background-color: var(--background-light);
+  --nav-hover-font-color: var(--font-color-light);
+}
+
+img {
+  max-width: 100%;
+}
+
+a:visited {
+  color: var(--page-font-color);
+}
+
+body {
+  background-image: var(--page-background-image);
+  background-color: var(--page-background-color);
+  color: var(--page-font-color);
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+  position: relative;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#theme {
+  color: #fff;
+  background-color: #111;
+  font-family: monospace;
+}
+
+.header {
+  background-color: var(--page-background-color);
+  color: var(--page-font-color);
+  border: solid;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  padding: 0 3em;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.navbar {
+  background-color: var(--page-background-color);
+  color: var(--page-font-color);
+  border-style: solid;
+  border-radius: 10px;
+  margin: 0 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  color: var(--page-font-color);
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-font-color);
+  border-radius: 8px;
+}
+
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin: 0 2em;
+}
+
+.left-flex-bar {
+  flex: 20%;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.center {
+  display: flex;
+  flex: 60%;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.center img {
+  border-radius: 4px;
+  border: solid 3px #000;
+}
+
+.right-flex-bar {
+  flex: 20%;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.footer {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--page-font-color);
+  text-align: center;
+  border: solid var(--page-font-color);
+  border-radius: 10px;
+  background-color: var(--page-background-color);
+  padding: 1em 2em;
+}
