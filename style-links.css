@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 :root {
-  --bg-color: #ddddff;
-  --bg-color-2: #eeeeff;
-  --text-color: #4444aa;
+  --bg-color: #ffffff;
+  --text-color: #222222;
 }
 
 body {
-  background-color: var(--bg-color-2);
+  background-color: var(--bg-color);
   background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
@@ -23,9 +22,6 @@ img {
 }
 
 .main {
-  padding: 2em 6em;
-  border: 3px solid var(--text-color);
-  background-color: var(--bg-color);
   border-radius: 10px;
   max-width: 40%;
   font-size: 14px;
