@@ -1,7 +1,7 @@
 var orbsCanvas = document.createElement("canvas");
 var orbsCtx = orbsCanvas.getContext("2d");
-var w = (orbsCanvas.width = window.innerWidth);
-var h = (orbsCanvas.height = window.innerHeight);
+var w = (orbsCanvas.width = document.querySelector("html").clientWidth);
+var h = (orbsCanvas.height = document.querySelector("html").clientHeight);
 document.body.appendChild(orbsCanvas);
 
 var orbs = [];

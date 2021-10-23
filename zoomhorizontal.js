@@ -1,6 +1,6 @@
 var canvas = document.createElement("canvas");
-var w = (canvas.width = window.innerWidth);
-var h = (canvas.height = window.innerHeight);
+var w = (canvas.width = document.querySelector("html").clientWidth);
+var h = (canvas.height = document.querySelector("html").clientHeight);
 var ctx = canvas.getContext("2d");
 document.body.appendChild(canvas);
 

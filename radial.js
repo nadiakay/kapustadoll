@@ -1,8 +1,8 @@
 var radial = document.createElement("canvas");
 radial.classList.add("radial");
 var radialCtx = radial.getContext("2d");
-var w = (radial.width = window.innerWidth);
-var h = (radial.height = window.innerHeight);
+var w = (radial.width = document.querySelector("html").clientWidth);
+var h = (radial.height = document.querySelector("html").clientHeight);
 document.body.appendChild(radial);
 
 var table = document.createElement("table");
