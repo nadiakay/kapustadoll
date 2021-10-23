@@ -1,8 +1,8 @@
 var canvas = document.createElement("canvas");
-var w = (canvas.width = window.innerWidth);
-var h = (canvas.height = window.innerHeight);
+var w = (canvas.width = 300);
+var h = (canvas.height = 150);
 var ctx = canvas.getContext("2d");
-document.body.appendChild(canvas);
+container.appendChild(canvas);
 
 var fov = 250;
 

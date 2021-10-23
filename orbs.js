@@ -1,8 +1,7 @@
-var orbsCanvas = document.createElement("canvas");
+var orbsCanvas = document.getElementById("canvas");
 var orbsCtx = orbsCanvas.getContext("2d");
-var w = (orbsCanvas.width = window.innerWidth);
-var h = (orbsCanvas.height = window.innerHeight);
-document.body.appendChild(orbsCanvas);
+var w = (orbsCanvas.width = 300);
+var h = (orbsCanvas.height = 150);
 
 var orbs = [];
 //for i in n orbs.push({center point, radius})

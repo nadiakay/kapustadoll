@@ -1,12 +1,8 @@
 var radial = document.createElement("canvas");
-radial.classList.add("radial");
 var radialCtx = radial.getContext("2d");
-var w = (radial.width = window.innerWidth);
-var h = (radial.height = window.innerHeight);
-document.body.appendChild(radial);
-
-var table = document.createElement("table");
-document.body.appendChild(table);
+var w = (radial.width = 300);
+var h = (radial.height = 150);
+container.appendChild(radial);
 
 var r = h / 4;
 var p = { x: r, y: r };
@@ -30,8 +26,6 @@ function drawRad(angle) {
   radialCtx.moveTo(p.x, p.y);
   radialCtx.lineTo(p.x + Math.sin(angle) * r, p.y + Math.cos(angle) * r);
   radialCtx.stroke();
-
-  //updateTable(angle);
 }
 
 function getRandomAngle() {
@@ -44,11 +38,3 @@ function getRandomRadius() {
   p = { x: r, y: r };
 }
 
-function updateTable(val) {
-  var row = document.createElement("tr");
-  row.innerHTML = val;
-  table.appendChild(row);
-  if (table.rows.length > Math.floor(Math.random() * 20))
-    table.removeChild(table.childNodes[0]);
-  if (Math.floor(Math.random() * 10) == 1) table.innerHTML = "";
-}
