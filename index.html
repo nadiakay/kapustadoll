@@ -1,90 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>kapustadoll :: index</title>
+  </head>
+  <body class="theme-dark">
+    <header>
+      <h1>kapustadoll online</h1>
+    </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kapustadoll: index</title>
-  <link href="style.css" rel="stylesheet" type="text/css" media="all" />
-</head>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Index</a></li>
+        <li><a href="gallery.html">Drawings</a></li>
+        <li><a href="links.html">Links</a></li>
+      </ul>
 
-<body id="body" class="theme-dark">
-<div class="top-container">
-    <!-- Toolbar -->
-    <div class="toolbar">
-      <select id="theme">
-        <!-- fix this -->
-        <option value="theme-select">theme</option>
-        <option value="theme-dark">dark</option>
-        <option value="theme-light">light</option>
-        <option value="theme-rave">rave</option>
-      </select>
-      <button id="swap-dollz">swap dollz</button>
-      <span class="hidden"></span>
-      <span>by nadia</span>
-      <span><a href="mailto:nadiakrakowski@gmail.com">email me</a></span>
-    </div>
-  
-    <!-- Header -->
-    <div class="header">
-      <h1>
-        <img src="img/update.gif" alt="Updated!" class="updated">kapustadoll online
-      </h1>
-    </div>
-  
-    <!-- Nav -->
-    <div class="nav">
-      <a href="gallery.html">
-        <p><b>Drawings</b></p>
-      </a>
-  
-      <a href="links.html">
-        <p><b>Links</b></p>
-      </a>
-    </div>
-</div>
+      <ul class="nav">
+        <li><select name="theme" id="theme">
+          <option value="theme-dark">Dark Mode</option>
+          <option value="theme-light">Light Mode</option>
+        </select></li>
+      </ul>
+    </nav>
 
-  <!-- Flex content -->
-  <div class="main-flex">
-    <div class="top-row">
-      <div class="top-left dollz">
-        <img src="img/dollz/SDshuni84.gif" /><img src="img/dollz/SDshuni90.gif" /><img src="img/dollz/J.gif" />
+    <main>
+      <div class="doll-container">
+        <div class="doll">
+          <img src="img/dollz/ddr.gif" alt="">
+        </div>
       </div>
+      
+    </main>
 
-      <div class="center">
-        <img src="img/dollz/ddr.gif" />
-      </div>
-
-      <div class="top-right dollz">
-        <img src="img/dollz/SD_Shuni18.gif" /><img src="img/dollz/SD_Shuni29.gif" /><img
-          src="img/dollz/gothicpinkwings.png" />
-      </div>
-    </div>
-    <div class="bottom-row">
-      <div class="bottom-left dollz"></div>
-      <div class="bottom-right dollz">
-        <img src="img/dollz/SD_Anime16.gif" /><img src="img/dollz/SD_Anime09.gif" /><img
-          src="img/dollz/SD_Anime19.gif" /><img src="img/dollz/SD_Anime14.gif" />
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <p>Sources for graphics:</p>
-    <a href=http://www.glitter-graphics.com title='Myspace Graphics'><img
+    <footer>
+      <p>Site by <a href="mailto:nadiakrakowski@gmail.com">Nadia</a></p>
+      <p><span class="glitter">Gifs from&nbsp;</span>
+      <a href=http://www.glitter-graphics.com title='Myspace Graphics'><img
         src=http://dl2.glitter-graphics.net/pub/170/170412vrl6tuq51f.gif width=234 height=17
-        alt='myspace layouts, myspace codes, glitter graphics'></a><br>
-    <a href="https://graphic.neocities.org/" title="Bonnibel's Graphic Collection"><img src="img/BonGraphics.png"
-        alt="Bonnibel's Graphic Collection" /></a>
-    <a href="http://sd.silentears.net/" title="Silent Devotion ♥"><img src="img/sd.gif" /></a>
+        class="glitter" alt='myspace layouts, myspace codes, glitter graphics'></a></p>
+    </footer>
 
-  </div>
-
-  <script src="dollz.js"></script>
-  <script src="theme.js"></script>
-  <script src="orbs.js"></script>
-  <script src="zoomhorizontal.js"></script>
-</body>
-
+    <script src="theme2.js"></script>
+    <script src="orbs2.js"></script>
+    <script src="zoomhorizontal2.js"></script>
+  </body>
 </html>
