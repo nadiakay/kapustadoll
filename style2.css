@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.theme-dark {
+  --bg-color: black;
+  --font-color: white;
+  --font: monospace;
+}
+
+.theme-light {
+  --bg-color: lightgray;
+  --font-color: black;
+  --font: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: var(--font);
+  font-size: 16px;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding-top: 1em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+}
+
+ul {
+  border: solid 1px var(--font-color);
+  list-style-type: none;
+  padding: 0.5em 0;
+}
+
+li {
+  padding: 0 1em 0 1em;
+  display: inline-block;
+}
+
+select {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: none;
+  text-decoration: underline;
+  font-family: var(--font);
+  font-size: 1em;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+a {
+  color: var(--font-color);
+}
+
+#main {
+  position: relative;
+  background-image: url(img/sparks.gif);
+  background-size: cover;
+  width: 640px;
+  height: 480px;
+  margin: auto;
+  margin-top: 1em;
+  border: solid 1px var(--font-color);
+}
+
+.gallery {
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.pic {
+  vertical-align: center;
+  flex: 25%;
+  max-width: 25%;
+  padding: 4px;
+}
+
+.pic img {
+  width: 100%;
+}
+
+.pic p {
+  text-align: center;
+  padding: 0.5em 0 1.5em;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .pic {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pic {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.container {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 40%;
+}
+
+canvas {
+  position: absolute;
+}
+
+footer {
+  padding: 3em 0 1em;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer p:first-of-type {
+  padding-bottom: 1em;
+}
+
+.glitter {
+  margin: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 720px) {
+  nav {
+    flex-direction: column;
+  }
+
+  #main {
+    width: 320px;
+    height: 240px;
+  }
+}
