@@ -101,13 +101,19 @@ main {
   width: min-content;
   background-color: var(--bg-color);
   border: solid 1px var(--font-color);
+}
+
+.theme-dark .doll-frame {
   box-shadow: 1px 1px 1px 4px rgb(0, 0, 0, 0.7),
     -1px -1px 1px 2px rgb(0, 0, 0, 0.7);
 }
 
-.doll-container {
+.theme-dark .doll-container {
   box-shadow: inset 1px 1px 1px 3px rgb(0, 0, 0, 0.7),
     inset -1px -1px 1px 3px rgb(0, 0, 0, 0.7);
+}
+
+.doll-container {
   position: relative;
   background-image: url(img/sparks.gif);
   background-size: cover;
