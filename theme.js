@@ -1,13 +1,14 @@
 const theme = document.getElementById("theme");
-const body = document.getElementById("body");
 
-if (localStorage.getItem("theme") !== null) setTheme(localStorage.getItem("theme"));
-//fix this: remove "theme" value & get value from localstorage if exists
+if (localStorage.getItem("theme") !== null)
+  setTheme(localStorage.getItem("theme"));
+else setTheme("theme-dark");
 
-function setTheme(theme) {
-  localStorage.setItem("theme", theme);
-  body.removeAttribute("class");
-  body.classList.add(theme);
+function setTheme(newTheme) {
+  localStorage.setItem("theme", newTheme);
+  document.body.removeAttribute("class");
+  document.body.classList.add(newTheme);
+  theme.value = newTheme;
 }
 
-theme.addEventListener("change", (e) => setTheme(e.target.value));
+theme.addEventListener("change", e => setTheme(e.target.value));

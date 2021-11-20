@@ -1,10 +1,8 @@
 var canvas = document.createElement("canvas");
-var w = (canvas.width = document.querySelector("html").clientWidth);
-var h = (canvas.height = document.querySelector("html").clientHeight);
 var ctx = canvas.getContext("2d");
-document.body.appendChild(canvas);
+main.appendChild(canvas);
 
-var fov = 250;
+const fov = 250;
 
 var horizontals = [];
 for (var z = -250; z < 250; z += 5) horizontals.push({ y: 40, z: z });
@@ -18,20 +16,20 @@ function init() {
 }
 
 function render() {
-  ctx.clearRect(0, 0, w, h);
+  var w = (canvas.width = main.clientWidth);
+  var h = (canvas.height = main.clientHeight);
 
   var i = horizontals.length;
   while (i--) {
     var horizontal = horizontals[i];
     var scale = fov / (fov + horizontal.z);
     var y2d = horizontal.y * scale + h / 2;
-    drawHorizontal(y2d, i);
-
+    drawHorizontal(w, y2d, i);
     horizontal.z -= 1;
     if (horizontal.z < -fov) horizontal.z += 2 * fov;
   }
 }
-function drawHorizontal(y, color) {
+function drawHorizontal(w, y, color) {
   var rgbVals = hslToRgb(color / 100, 1, 0.5);
   ctx.strokeStyle = `rgb(${rgbVals[0]}, ${rgbVals[1]}, ${rgbVals[2]})`;
   ctx.beginPath();
@@ -66,3 +64,5 @@ function hslToRgb(h, s, l) {
   }
   return [r * 255, g * 255, b * 255];
 }
+
+main.addEventListener("resize", init());
