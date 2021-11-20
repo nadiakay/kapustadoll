@@ -89,7 +89,7 @@ a {
 }
 
 main {
-  margin: 1em auto;
+  margin: 2em auto;
 }
 
 /* Index */
@@ -116,26 +116,12 @@ canvas {
   position: absolute;
 }
 
-/* Links */
-
-.links {
-  text-align: center;
-  padding: 0 1em;
-}
-
-.links h3 {
-  margin-top: 3em;
-}
-
-.links li {
-  padding-bottom: 0.8em;
-}
-
 /* Gallery */
 
 .gallery {
   padding: 1em;
   justify-content: space-evenly;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -144,13 +130,18 @@ canvas {
 .gallery-item {
   max-width: 30%;
   display: flex;
+  height: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
   margin: 1em 0.5em;
+  padding: 0.25em;
+  border: 3px solid var(--font-color);
+}
+
+.inner-frame {
+  padding: 1em;
   border: 1px solid var(--font-color);
-  background-color: var(--bg-color);
 }
 
 .pic a {
@@ -163,6 +154,22 @@ canvas {
   max-height: 320px;
   margin: auto;
   border: 1px solid var(--font-color);
+}
+
+/* Links */
+
+.links {
+  text-align: center;
+  padding: 0 1em;
+}
+
+.links h2 {
+  margin-top: 2em;
+}
+
+.links li {
+  padding-bottom: 0.8em;
+  font-size: 1em;
 }
 
 /* Footer */
@@ -196,6 +203,10 @@ footer p:first-of-type {
   .gallery-item {
     flex: 100%;
     max-width: 100%;
+  }
+
+  .pic img {
+    max-height: none;
   }
 }
 
