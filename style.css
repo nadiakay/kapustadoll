@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
 * {
   box-sizing: border-box;
@@ -168,8 +169,13 @@ canvas {
 }
 
 .links li {
-  padding-bottom: 0.8em;
+  padding-bottom: 0.5em;
   font-size: 1em;
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Footer */
