@@ -7,14 +7,12 @@
 
 .theme-dark {
   --bg-color: black;
-  --bg-color-frame: black;
   --font-color: white;
   --font: "Montserrat", sans-serif;
 }
 
 .theme-light {
   --bg-color: #eee;
-  --bg-color-frame: rgb(124, 118, 111);
   --font-color: black;
   --font: "Montserrat", sans-serif;
 }
@@ -29,6 +27,7 @@ body {
 
 header {
   padding-top: 1em;
+  background-color: var(--bg-color);
 }
 
 h1,
@@ -64,11 +63,12 @@ nav {
 
 nav ul {
   border: solid 1px var(--font-color);
-  padding: 0.5em 0;
+  padding: 0;
 }
 
 nav li {
-  padding: 0 1em 0 1em;
+  background-color: var(--bg-color);
+  padding: 0.5em 1em;
   display: inline-block;
 }
 
@@ -115,6 +115,8 @@ main {
 
 canvas {
   position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 /* Gallery */

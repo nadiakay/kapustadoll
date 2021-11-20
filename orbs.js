@@ -1,12 +1,12 @@
 var orbsCanvas = document.createElement("canvas");
 var orbsCtx = orbsCanvas.getContext("2d");
-main.appendChild(orbsCanvas);
+document.body.appendChild(orbsCanvas);
 
 render();
 
 function render() {
-  var w = (orbsCanvas.width = main.clientWidth);
-  var h = (orbsCanvas.height = main.clientHeight);
+  var w = (orbsCanvas.width = document.body.clientWidth);
+  var h = (orbsCanvas.height = document.body.clientHeight);
 
   orbsCtx.clearRect(0, 0, w, h);
 
@@ -36,4 +36,4 @@ function getCenter(w, h) {
   return [x, y];
 }
 
-main.addEventListener("resize", render());
+document.body.addEventListener("resize", render());

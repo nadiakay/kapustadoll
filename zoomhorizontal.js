@@ -1,6 +1,6 @@
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
-main.appendChild(canvas);
+document.body.appendChild(canvas);
 
 const fov = 250;
 
@@ -12,12 +12,12 @@ init();
 function init() {
   ctx.strokeStyle = "white";
   var ticks = 0;
-  var timer = setInterval(render, 1000 / 30);
+  var timer = setInterval(render, 1800 / 30);
 }
 
 function render() {
-  var w = (canvas.width = main.clientWidth);
-  var h = (canvas.height = main.clientHeight);
+  var w = (canvas.width = document.body.clientWidth);
+  var h = (canvas.height = document.body.clientHeight);
 
   var i = horizontals.length;
   while (i--) {
@@ -65,4 +65,4 @@ function hslToRgb(h, s, l) {
   return [r * 255, g * 255, b * 255];
 }
 
-main.addEventListener("resize", init());
+document.body.addEventListener("resize", init());
