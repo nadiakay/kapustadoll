@@ -146,19 +146,14 @@ canvas {
   flex-direction: row;
 }
 
-.gallery-item {
+.frame {
   max-width: 30%;
-  display: flex;
-  height: fit-content;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 1em 0.5em;
   padding: 0.25em;
   border: 3px solid var(--font-color);
 }
 
-.inner-frame {
+.gallery-item {
   padding: 1em;
   border: 1px solid var(--font-color);
 }
@@ -213,15 +208,13 @@ footer p:first-of-type {
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
-  .gallery-item {
-    flex: 50%;
+  .frame {
     max-width: 50%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .gallery-item {
-    flex: 100%;
+  .frame {
     max-width: 100%;
   }
 
