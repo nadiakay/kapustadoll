@@ -6,29 +6,29 @@
 }
 
 .theme-dark {
-  --bg-color: black;
   --font-color: white;
+  --bg-color: black;
   --font: "Montserrat", sans-serif;
 }
 
 .theme-light {
-  --bg-color: #eee;
   --font-color: black;
+  --bg-color: #eee;
   --font: "Montserrat", sans-serif;
 }
 
 body {
-  background-color: var(--bg-color);
   color: var(--font-color);
+  background-color: var(--bg-color);
   font-family: var(--font);
   margin: 0;
 }
 
 header {
-  margin: 2em auto 0;
-  width: fit-content;
-  padding: 0 0.5em;
   background-color: var(--bg-color);
+  width: fit-content;
+  margin: 2em auto 0;
+  padding: 0 0.5em;
 }
 
 h1,
@@ -69,17 +69,16 @@ nav ul {
 }
 
 nav li {
-  padding: 0.5em 1em;
   display: inline-block;
+  padding: 0.5em 1em;
 }
 
 select {
-  background-color: var(--bg-color);
   color: var(--font-color);
+  background-color: var(--bg-color);
   border: none;
   text-decoration: underline;
-  font-family: var(--font);
-  font-size: 1em;
+  font: 1em var(--font);
 }
 
 select:hover {
@@ -97,18 +96,18 @@ main {
 /* Index */
 
 .doll-frame {
-  margin: auto;
-  width: min-content;
   background-color: var(--bg-color);
   border: solid 1px var(--font-color);
+  width: min-content;
+  margin: auto;
 }
 
 .doll-container {
   position: relative;
   background-image: url(img/sparks.gif);
   background-size: cover;
-  width: 640px;
   height: 480px;
+  width: 640px;
   margin: auto;
 }
 
@@ -131,31 +130,31 @@ main {
 
 canvas {
   position: absolute;
-  top: 0;
   z-index: -1;
+  top: 0;
 }
 
 /* Gallery */
 
 .gallery {
-  padding: 1em;
-  justify-content: space-evenly;
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
 }
 
 .frame {
+  border: 3px solid var(--font-color);
   max-width: 30%;
   margin: 1em 0.5em;
   padding: 0.25em;
-  border: 3px solid var(--font-color);
 }
 
 .gallery-item {
-  padding: 1em;
   border: 1px solid var(--font-color);
+  padding: 1em;
 }
 
 .pic a {
@@ -164,19 +163,18 @@ canvas {
 }
 
 .pic img {
-  max-width: 100%;
-  max-height: 320px;
-  margin: auto;
   border: 1px solid var(--font-color);
+  max-height: 320px;
+  max-width: 100%;
+  margin: auto;
 }
 
 /* Links */
 
 .links {
-  text-align: center;
   padding: 0 1em;
-  font-family: sans-serif;
-  font-size: 1em;
+  text-align: center;
+  font: 1em sans-serif;
 }
 
 .links li {
@@ -185,6 +183,16 @@ canvas {
 
 .hidden {
   display: none;
+}
+
+/* About me */
+
+.selfie {
+  text-align: center;
+}
+
+.selfie img {
+  width: 320px;
 }
 
 /* Footer */
@@ -200,9 +208,9 @@ footer p:first-of-type {
 }
 
 .glitter {
-  margin: auto;
-  vertical-align: middle;
   display: inline-block;
+  vertical-align: middle;
+  margin: auto;
 }
 
 /* Media Queries */
@@ -229,14 +237,14 @@ footer p:first-of-type {
   }
 
   .doll-container {
-    width: 320px;
     height: 240px;
+    width: 320px;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .doll-container {
-    width: 300px;
     height: 225px;
+    width: 300px;
   }
 }
