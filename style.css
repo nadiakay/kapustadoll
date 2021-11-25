@@ -157,12 +157,7 @@ canvas {
   padding: 1em;
 }
 
-.pic a {
-  width: 90%;
-  margin: auto;
-}
-
-.pic img {
+.pic {
   border: 1px solid var(--font-color);
   max-height: 320px;
   max-width: 100%;
