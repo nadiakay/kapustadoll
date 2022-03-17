@@ -1,6 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
+@font-face {
+  font-family: charter;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url("fonts/charter_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: charter;
+  font-style: italic;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url("fonts/charter_italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: charter;
+  font-style: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  src: url("fonts/charter_bold.woff2") format("woff2");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,19 +32,12 @@
 .theme-dark {
   --font-color: white;
   --bg-color: black;
-  --font: "Montserrat", sans-serif;
-}
-
-.theme-light {
-  --font-color: black;
-  --bg-color: #eee;
-  --font: "Montserrat", sans-serif;
+  --font: charter, sans-serif;
 }
 
 body {
   color: var(--font-color);
   background-color: var(--bg-color);
-  font-family: var(--font);
   margin: 0;
 }
 
@@ -34,6 +51,7 @@ header {
 h1,
 h2,
 h3 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 100;
   text-align: center;
 }
@@ -55,22 +73,26 @@ ul {
 }
 
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 2em auto;
   padding: 0 1em;
 }
 
 nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
   background-color: var(--bg-color);
   border: solid 1px var(--font-color);
   padding: 0;
+  margin: auto;
 }
 
 nav li {
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 0.5em 1.5em;
 }
 
 select {
@@ -169,7 +191,7 @@ canvas {
 .links {
   padding: 0 1em;
   text-align: center;
-  font: 1em sans-serif;
+  font-size: 1.2rem;
 }
 
 .links li {
@@ -193,8 +215,9 @@ canvas {
 /* Footer */
 
 footer {
-  padding: 3em 0 2em;
+  padding: 4em 0;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
 }
 
