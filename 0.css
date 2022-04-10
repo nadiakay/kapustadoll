@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+
+a {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1,
+h2,
+footer {
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0.5em auto 2em;
+  width: fit-content;
+}
+
+nav ul li {
+  width: fit-content;
+}
+
+.panel {
+  margin: 0 0 5em 0;
+}
+
+.flex-row {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-size: cover;
+}
+
+.panel-1 {
+  background-image: url(img/ss035.gif);
+  padding-bottom: 4em;
+}
+
+.panel-1-5 {
+}
+
+.panel-2 {
+  text-align: center;
+}
+
+.panel-3 {
+  background-image: url(img/Scolytus_spp_egg_galleries.jpeg);
+}
+
+.panel-4 {
+  background-image: url(img/sunset.jpg);
+}
+
+.panel-5 {
+  background-image: url(img/rbsc_blackader-lauterman_contemporary-art_HF5845K5_0041_2.jpeg);
+}
+
+.imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.imgs li {
+  padding: 1em;
+}
+
+.doll-frame {
+  background-color: black;
+  border: solid 1px white;
+  width: min-content;
+  margin: auto;
+}
+
+.doll-container {
+  position: relative;
+  background-image: url(img/sparks.gif);
+  background-size: cover;
+  height: 480px;
+  width: 640px;
+  margin: auto;
+}
+
+.doll {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 40%;
+}
+
+.bg-black li {
+  background-color: black;
+}
+
+.bg-white li {
+  color: black;
+  background-color: white;
+}
+
+.bg-white li a {
+  color: black;
+}
+
+.links {
+  padding: 1em;
+  margin: 1em;
+  height: fit-content;
+}
+
+.links li {
+  margin: 1em;
+  width: fit-content;
+  padding: 0.25em 1em;
+}

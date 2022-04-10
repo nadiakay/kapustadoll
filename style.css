@@ -27,7 +27,7 @@ body {
 header {
   background-color: var(--bg-color);
   width: fit-content;
-  margin: 2em auto 0;
+  margin: 3em auto;
   padding: 0 0.5em;
 }
 
@@ -54,23 +54,19 @@ ul {
   list-style-type: none;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
-}
-
 nav ul {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--bg-color);
   border: solid 1px var(--font-color);
   padding: 0;
+  margin: 0em auto;
+  max-width: 600px;
 }
 
 nav li {
   display: inline-block;
-  padding: 0.5em 1em;
+  margin: 0.5em 4em;
 }
 
 select {
