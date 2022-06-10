@@ -72,6 +72,10 @@ ul {
   list-style-type: none;
 }
 
+p {
+  text-align: center;
+}
+
 nav {
   font-family: "Montserrat", sans-serif;
   margin: 2em auto;
